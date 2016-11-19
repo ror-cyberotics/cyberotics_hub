@@ -1,0 +1,6 @@
+{
+    "appSecret": "fdad8f8a39ddc580a5a8bdcbd9e6330f",
+    "pageAccessToken": "EAASKeQtPNIEBAPvMN2b8O7UAhcZC0w6bxtkGqow4Sf942YroOs1SjPEequ49SjNfgZAI9W0oeoeFp9bbk8kE5HHRNgI0GMB2MUFDfsOwwArsZAp5cLNFhYG02auRIhF2c4co5uTF4XBp40j7LnsLD0qZBh5Ajw5n5WLBbZBecuAZDZD",
+    "validationToken": "cyberotics_verification_token",
+    "serverURL": "https://fortishq.herokuapp.com/webhook"
+}
