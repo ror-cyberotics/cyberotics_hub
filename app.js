@@ -56,31 +56,6 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
   process.exit(1);
 }
 
-var headers = {
-    'Content-Type': 'application/json'
-};
-
-var dataString = {
-  "setting_type":"greeting",
-  "greeting":{
-    "text":"Timeless apparel for the masses."
-  }
-};
-
-var options_greeting = {
-    url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token='+ PAGE_ACCESS_TOKEN,
-    method: 'POST',
-    headers: headers,
-    body: dataString
-};
-
-function callbackGreeting(error, response, body) {
-    if (!error && response.statusCode == 200) {
-        console.log(body);
-    }
-}
-
-request(options_greeting, callbackGreeting);
 /*
  * Use your own validation token. Check that the token used in the Webhook 
  * setup is the same token used here.
