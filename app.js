@@ -56,13 +56,17 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
   process.exit(1);
 }
 
-
+// Index route
+app.get('/', function (req, res) {
+    res.send('Hello {{user_first_name}}, I am a chat bot')
+})
 
 /*
  * Use your own validation token. Check that the token used in the Webhook 
  * setup is the same token used here.
  *
  */
+
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === VALIDATION_TOKEN) {
