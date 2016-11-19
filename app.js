@@ -56,6 +56,19 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
   process.exit(1);
 }
 
+request.post({
+    method: 'POST',
+    uri: "https://graph.facebook.com/v2.6/me/thread_settings?access_token=$"+ PAGE_ACCESS_TOKEN,
+    qs: {
+        "setting_type": 'greeting',
+        "greeting":{
+        "text":"Hi {{user_first_name}}, welcome to this bot."
+    }
+    json: true
+}, (err, res, body) => {
+    // Deal with the response
+});
+
 /*
  * Use your own validation token. Check that the token used in the Webhook 
  * setup is the same token used here.
