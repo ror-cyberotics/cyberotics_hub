@@ -56,10 +56,16 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
   process.exit(1);
 }
 
-// Index route
-app.get('/', function (req, res) {
-    res.send('Hello {{user_first_name}}, I am a chat bot')
-})
+var options_greeting = {
+  url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token='+ PAGE_ACCESS_TOKEN,
+  setting_type: "greeting",
+  greeting: {
+    text:"Timeless apparel for the masses."
+  },
+  method: 'POST'
+};
+
+request(options_greeting, function (error, response, body) { });
 
 /*
  * Use your own validation token. Check that the token used in the Webhook 
