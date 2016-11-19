@@ -60,7 +60,7 @@ var headers = {
     'Content-Type': 'application/json'
 };
 
-dataString = {
+var dataString = {
   "setting_type":"greeting",
   "greeting":{
     "text":"Timeless apparel for the masses."
