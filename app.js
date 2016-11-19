@@ -60,15 +60,15 @@ var headers = {
     'Content-Type': 'application/json'
 };
 
-dataString = '{
+dataString = {
   "setting_type":"greeting",
   "greeting":{
     "text":"Timeless apparel for the masses."
   }
-}';
+};
 
 var options_greeting = {
-    url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token=PAGE_ACCESS_TOKEN',
+    url: 'https://graph.facebook.com/v2.6/me/thread_settings?access_token='+ PAGE_ACCESS_TOKEN,
     method: 'POST',
     headers: headers,
     body: dataString
